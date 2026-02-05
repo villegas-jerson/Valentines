@@ -22,10 +22,12 @@
         <audio id="Nobone">
             <source src="{{url_for('static', filename='imgae/noSong.mp3')}}" type="audio/mpeg">
         </audio>
-
-         <img id="ballerinaPig" src="/static/imgae/Ballerina.gif" style="display:none; margin-left: 1000px; margin-top:250px;">
-        <img id="sadPig" src="/static/imgae/Sadpiggy.gif" style="display:none; margin-left: 1000px; margin-top:250px;">
-
+        <div>
+            <img id="DancePiggy" src="/static/imgae/dancePig2.gif" style="display: none; margin-left: 1200px;">
+            <img id="ballerinaPig" src="/static/imgae/Ballerina.gif" style="display:none; margin-left: 1000px; margin-top:50px;">
+        </div>
+         <img id="sadPig" src="/static/imgae/Sadpiggy.gif" style="display:none; margin-left: 1000px; margin-top:250px;">
+         
         <script>
         function yBtn()
         {
@@ -44,6 +46,11 @@
                 var dancePig = document.getElementById("ballerinaPig");
                 dancePig.style.display = "block";
             }, 21000);
+
+             setTimeout(function() {
+                var twerkPig = document.getElementById("DancePiggy");
+                twerkPig.style.display = "block";
+            }, 62000);
 
         }
 
