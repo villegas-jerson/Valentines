@@ -1,11 +1,12 @@
-body{
-        background-image: url("../imgae/valentine_pig.gif");
-        background-size:1000px;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-color: pink;
-        margin: 0;
-    }
+body {
+    /* ../ means "go out of the styles folder" then look for imgae */
+    background-image: url("../imgae/valentinepig.gif"); 
+    background-size: 1000px; /* Changed from 1000px to fill the screen */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: pink;
+    margin: 0;
+}
 
 .center{
     text-align: center;
