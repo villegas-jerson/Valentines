@@ -1,0 +1,17 @@
+body{
+        background-image:url("/static/imgae/valentine pig.gif");
+        background-size:1000px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: pink;
+        margin: 0;
+    }
+
+.center{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.button-group{
+    text-align: center;
+}

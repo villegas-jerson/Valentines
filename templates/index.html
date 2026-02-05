@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+    <title>Valentine</title>
+</head>
+<body>
+        <div class="container">
+            <h1 class="center" id="this">Will you be my Valentine Baby Bone?</h1>
+            <div id="butt" class="button-group">
+                <button onclick="yBtn()">Yes</button>
+                <button onclick="nBtn()">No</button>
+            </div>
+        </div>
+
+        <audio id="bone">
+            <source src="{{url_for('static', filename='imgae/boneSong.mp3')}}" type="audio/mpeg">
+        </audio>
+
+        <audio id="Nobone">
+            <source src="{{url_for('static', filename='imgae/noSong.mp3')}}" type="audio/mpeg">
+        </audio>
+
+         <img id="ballerinaPig" src="/static/imgae/Ballerina.gif" style="display:none; margin-left: 1000px; margin-top:250px;">
+        <img id="sadPig" src="/static/imgae/Sadpiggy.gif" style="display:none; margin-left: 1000px; margin-top:250px;">
+
+        <script>
+        function yBtn()
+        {
+            document.getElementById('butt').style.display = 'none';
+
+            document.getElementById('this').innerText = "I Love You Very Much Babe ❤️"
+            
+            document.body.style.backgroundImage = "url('/static/imgae/Yespig.gif')";
+
+           var song = document.getElementById('bone')
+            if (song){
+                song.play();
+            };
+
+            setTimeout(function() {
+                var dancePig = document.getElementById("ballerinaPig");
+                dancePig.style.display = "block";
+            }, 21000);
+
+        }
+
+        function nBtn()
+        {   
+            document.getElementById('butt').style.display = 'none';
+
+            document.getElementById('this').innerText = "Why No Love Your Baboy Pig 😔"
+
+            document.body.style.backgroundImage = "url('/static/imgae/Nopig.gif')"; 
+
+            var song = document.getElementById('Nobone');
+            song.volume = 0.1;
+            song.play();
+
+            setTimeout(function() {
+                var sadPiggy = document.getElementById("sadPig");
+                sadPiggy.style.display = "block";
+            }, 5000);
+
+            setTimeout(function() {
+                location.reloading
+            }, 5000);
+
+        }
+        </script>
+
+</body>
+
+</html>             
